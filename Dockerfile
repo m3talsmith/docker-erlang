@@ -17,6 +17,11 @@ RUN apt-get update > /dev/null &&\
     libwxgtk2.8-dev\
     > /dev/null
 
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
 RUN mkdir /dbuild
 WORKDIR /dbuild
 RUN wget -q http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_18.1-1~ubuntu~wily_amd64.deb
