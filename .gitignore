@@ -1,0 +1,5 @@
+# Ignore OS X Meta-data
+.DS_Store
+
+# Ignore vim swap files
+*.sw*
