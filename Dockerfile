@@ -21,6 +21,8 @@ RUN mkdir /dbuild
 WORKDIR /dbuild
 RUN wget -q http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_18.1-1~ubuntu~wily_amd64.deb
 RUN dpkg -i esl-erlang_18.1-1~ubuntu~wily_amd64.deb > /dev/null
+RUN wget -q https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+RUN dpkg -i erlang-solutions_1.0_all.deb > /dev/null
 WORKDIR /
 RUN rm -rf /dbuild
 
